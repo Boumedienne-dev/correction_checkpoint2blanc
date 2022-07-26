@@ -18,9 +18,23 @@ function GameDetail() {
         <>
             {
                 gameDetails &&
-                    <div>
+                <div className="card-game-wrapper">
+                <div className="card-game-main">
+                    <img src={gameDetails.background_image} alt={gameDetails.name} />
+                    <div className="content-info">
                         <h2>{gameDetails.name}</h2>
+                        <p>{gameDetails.rating}</p>
                     </div>
+                </div>
+                <div className="card-game-bonus">
+                    <div className="informations">
+                        <div className="genre">
+                            <p>Genre:</p>
+                        </div>
+                        <p>Release date: {gameDetails.released}</p>
+                    </div>
+                </div>
+            </div>
             }
         </>
     );
